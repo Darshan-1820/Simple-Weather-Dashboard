@@ -13,10 +13,12 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    /* flex-direction: column; */
 }
 
 #weather-container {
     background: #9075D8;
+    /* background:  #4b86b4 ; */
     max-width: 600px;
     width: 100%;
     padding: 20px;
@@ -26,6 +28,7 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
+    /* margin-top: 20px; */
 }
 
 h2, label, p, .text {
@@ -37,7 +40,7 @@ h2, label, p, .text {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 input {
@@ -52,7 +55,7 @@ input {
 button {
     background: #CEA2D7;
     color: white;
-    padding: 10px;
+    padding: 9px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -124,6 +127,46 @@ button:active {
     font-size: 15px;
 }
 
+#forecast-container{
+    display: flex;
+    flex-direction: column;
+    background: #9075D8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.cards {
+    width: 100px;
+    height: auto;
+    /* border-radius: 20px; */
+    margin-bottom: 5px;
+}
+
+.card-icon img{
+    width: 30px;
+    margin-right: 10px;
+    
+}
+
+.day-name{
+    font-size: 15px;
+}
+
+.day-temp h3{
+    font-size: 15px;
+}
+
+.cards:not(:last-child) {
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 5px;
+}
 
 /* Responsive design */
 @media (max-width: 600px) {
