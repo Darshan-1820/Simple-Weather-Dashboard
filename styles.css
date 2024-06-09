@@ -13,8 +13,15 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    position: relative;
+    overflow: hidden;
     /* flex-direction: column; */
 }
+
+
+/* ...........................................................*/
+
+/* ...........................................................*/
 
 #weather-container {
     background: #9075D8;
@@ -186,6 +193,7 @@ button:active {
         box-shadow: none;
         border: none;
         max-width: none;
+        position: relative;
     }
 
     .weather h2 {
@@ -199,36 +207,76 @@ button:active {
     #weather-icon {
         width: 150px;
         height: 150px;
+        margin-top: 2rem;
     }
+
+    /* .moreInfo {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
 
     .moreInfo {
         flex-direction: column;
         align-items: flex-start;
+        position: absolute; /* Absolutely position it within the weather container */
+        bottom: 0.2rem; /* Position it at the bottom */
+        left: 10px; /* Align it to the left */
+        width: calc(100% - 20px); /* Make sure it fits within the container with padding */
+        justify-content: space-between; /* Space out the items */
     }
 
     .col {
         margin-bottom: 15px;
     }
 
+    .search{
+        width:100%;
+        display: block;
+    }
+
     input {
-        width: calc(100% - 110px);
-        margin-right: 10px;
+        /* width: calc(100% - 110px);
+        margin-right: 10px; */
+        width:100%;
+        margin-left:0;
+        margin-right:0;
     }
 
     button {
-        width: auto;
-        margin-top: 20px;
+        /* width: auto;
+        margin-top: 20px; */
+        width:100%;
+        margin-left:0;
+
     }
 
     #weather-container {
-        width: 100%;
+        width: 70%;
         margin-right: 0; 
     }
 
     #forecast-container {
-        width: 100%;
+        width: 40%;
         height: 100vh;
         margin-left: 2px; 
         border-radius: 0;
+        justify-content: center;
     }
+
+    .cards{
+        margin:10px;
+        width:auto;
+    }
+
+    .cards:not(:last-child){
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .current-date-time{
+        text-align: center;
+        margin-top: 0.2rem;
+    }
+
 }
